@@ -4,8 +4,14 @@ main.debug{background-color: red;}
 footer.debug{background-color: orange;}
 .debug .sidebar{background-color: blue;}
 .debug .upgrade-banner{background-color: yellow;}
+.debug .album{
+    background-color: white;
+    aspect-ratio: 1/1;
+}
 
 /* End Debug */
+
+
 
 /* DEFAULTS */
 
@@ -315,6 +321,10 @@ main{
     width: calc(100% - var(--sidebar-width-sm));
 }
 
+.album-collection{
+    list-style: none;
+}
+
 
 /* Footer */
 
@@ -324,14 +334,7 @@ footer{
 
 
 
-
-
-@media screen and (min-width: 576px) {
-
-    /* Container */
-    .container{max-width: var(--container-breakpoint-sm);}
-
-    /* Columns */
+@media screen and (max-width: 768px) {
 
     .col-1,
     .col-2,
@@ -348,7 +351,11 @@ footer{
         width: 100%;
     }
 
- 
+    /* Container */
+    .container{max-width: var(--container-breakpoint-sm);}
+
+    /* Columns */
+
     .col-sm-12{width: 100%;}
     .col-sm-11{width: calc((100% / 12) * 11);}
     .col-sm-10{width: calc((100% / 12) * 10);}
@@ -363,7 +370,6 @@ footer{
     .col-sm-1{width: calc(100% / 12);}
 
 }
-
 
 @media screen and (min-width: 768px) {
 
@@ -384,10 +390,9 @@ footer{
     .col-md-2{width: calc((100% / 12) * 2);}
     .col-md-1{width: calc(100% / 12);}
 
+      /* Sidebar */
 
-    /* Sidebar */
-
-    aside.sidebar{
+      aside.sidebar{
         width: var(--sidebar-width-md);
     }
 
@@ -403,8 +408,8 @@ footer{
         width: calc(100% - var(--sidebar-width-md));
     }
 
-
 }
+
 
 @media screen and (min-width: 992px) {
 
@@ -424,7 +429,6 @@ footer{
     .col-lg-3{width: calc((100% / 12) * 3);}
     .col-lg-2{width: calc((100% / 12) * 2);}
     .col-lg-1{width: calc(100% / 12);}
-
 }
 
 
@@ -448,3 +452,6 @@ footer{
     .col-xl-1{width: calc(100% / 12);}
 
 }
+
+
+
