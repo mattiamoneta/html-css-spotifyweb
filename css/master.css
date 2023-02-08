@@ -9,6 +9,11 @@ footer.debug{background-color: orange;}
     aspect-ratio: 1/1;
 }
 
+.debug .sidebar-bottom{
+    background-color: orange;
+    height: 80px;
+}
+
 /* End Debug */
 
 
@@ -44,6 +49,9 @@ p{font-size: 1rem;}
     --sidebar-width-md: 250px;
 
     --banner-height: 80px;
+
+    --sidebar-bottom-height: 80px;
+    --footer-height: 100px;
     
     /* Color Variables */
 
@@ -64,6 +72,10 @@ p{font-size: 1rem;}
 .text-secondary{color: var(--color-secondary);}
 .text-light{color: white;}
 .text-muted{color: var(--color-muted);}
+
+/* Lists */
+
+.list-none{list-style-type: none;}
 
 /* Positions */
 
@@ -303,7 +315,10 @@ p{font-size: 1rem;}
 
 aside.sidebar{
     width: var(--sidebar-width-sm);
+    overflow: hidden;
 }
+
+
 
 /* Banner */
 
@@ -323,7 +338,7 @@ aside.sidebar{
 /* Content */
 
 main{
-    height: calc(100vh - 100px);
+    height: calc(100vh - var(--footer-height));
 }
 
 .content{
@@ -331,9 +346,13 @@ main{
 }
 
 .album-collection{
-    list-style: none;
+    list-style-type: none;
 }
 
+
+.filters ul li{
+    display: inline-block;
+}
 
 /* Footer */
 
@@ -342,10 +361,19 @@ footer{
 }
 
 @media screen and (min-width: 576px) {
-      /* Sidebar */
+    /* Sidebar */
 
-      aside.sidebar{
-        width: var(--sidebar-width-md);
+    aside.sidebar{
+    width: var(--sidebar-width-md);
+    position: relative;
+
+    }
+
+    .sidebar-bottom{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
     }
 
     /* Banner */
@@ -359,6 +387,7 @@ footer{
     .content{
         width: calc(100% - var(--sidebar-width-md));
     }
+
 }
 
 
