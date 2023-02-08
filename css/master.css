@@ -11,7 +11,6 @@ footer.debug{background-color: orange;}
 
 .debug .sidebar-bottom{
     background-color: orange;
-    height: 80px;
 }
 
 /* End Debug */
@@ -51,7 +50,7 @@ p{font-size: 1rem;}
     --banner-height: 80px;
 
     --sidebar-bottom-height: 80px;
-    --footer-height: 100px;
+    --footer-height: 80px;
     
     /* Color Variables */
 
@@ -311,11 +310,30 @@ p{font-size: 1rem;}
 
 /* ---- PAGE ---- */
 
+
 /* Sidebar */
+
+
 
 aside.sidebar{
     width: var(--sidebar-width-sm);
-    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+aside.sidebar .playlist{
+    display: none;
+}
+
+aside.sidebar .sidebar-nav ul li a .label{
+    display: none;
+}
+
+aside.sidebar .sidebar-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -357,23 +375,24 @@ main{
 /* Footer */
 
 footer{
-    height: 100px;
+    height: var(--footer-height);
+    z-index: 999;
+}
+
+@media screen and (max-height: 460px) {
+
+   
+
 }
 
 @media screen and (min-width: 576px) {
+
     /* Sidebar */
 
     aside.sidebar{
-    width: var(--sidebar-width-md);
-    position: relative;
-
-    }
-
-    .sidebar-bottom{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+        width: var(--sidebar-width-md);
+        text-align: left;
+        overflow-y: hidden;
     }
 
     /* Banner */
@@ -387,6 +406,15 @@ footer{
     .content{
         width: calc(100% - var(--sidebar-width-md));
     }
+
+    aside.sidebar .playlist{
+        display: block;
+    }
+
+    aside.sidebar .sidebar-nav ul li a .label{
+        display: inline;
+    }
+    
 
 }
 
