@@ -9,18 +9,13 @@ footer.debug{background-color: orange;}
     aspect-ratio: 1/1;
 }
 
+
 .debug .sidebar-bottom{
     background-color: orange;
 }
 
-.debug .sidebar-top{
-    background-color: rebeccapurple;
-}
+.debug .footer-right{background-color: red;}
 
-.debug .logo-wrapper{background-color: aqua;}
-.debug .sidebar-nav{background-color: green;}
-.debug .playlist{background-color: yellow;}
-.debug .playlist-list{background-color: deeppink;}
 
 /* End Debug */
 
@@ -41,8 +36,18 @@ html{
     font-family: sans-serif; /* Inserire Font */
 }
 
-a{text-decoration: none;}
+a{
+    text-decoration: none;
+    color: var(--color-muted);
+}
+
+a:hover{
+    color: white;
+}
+
 p{font-size: 1rem;}
+
+h4{font-size: .9rem;}
 
 :root{
 
@@ -59,13 +64,15 @@ p{font-size: 1rem;}
     --banner-height: 80px;
 
     --sidebar-bottom-height: 40px;
-    --footer-height: 80px;
+    --footer-height: 90px;
     
     /* Color Variables */
 
     --color-primary: #141922;
     --color-secondary: #282828;
     --color-muted: #717171;
+    --color-lightgrey: #c5c5c5;
+    --color-lightgreen: #bff16a;
 
 }
 
@@ -123,7 +130,7 @@ p{font-size: 1rem;}
 
 .row{display: block;}
 
-.justify-between{justify-content: space-around;}
+.justify-between{justify-content: space-between;}
 .justify-start{justify-content: flex-start;}
 .justify-center{justify-content: center;}
 .justify-end{justify-content: flex-end;}
@@ -227,6 +234,7 @@ p{font-size: 1rem;}
 .pl-xl{padding-left:  3.5rem;}
 .pl-xxl{padding-left:  5rem;}
 
+.py-xxs{padding: 0.2rem 0;}
 .py-xs{padding: 0.5rem 0;}
 .py-sm{padding: .8rem 0;}
 .py-md{padding: 1.5rem 0;}
@@ -340,9 +348,17 @@ aside.sidebar .sidebar-bottom{
     height: var(--sidebar-bottom-height);
 }
 
-aside.sidebar .playlist, aside.sidebar .sidebar-nav ul li a .label{
+aside.sidebar a.navbar-btn .label{
     display: none;
 }
+
+aside.sidebar .playlist{
+    display: none;
+}
+
+.logo-md{display: none;}
+
+.logo-sm{display: block;}
 
 /* Banner */
 
@@ -385,7 +401,116 @@ main{
 
 footer{
     height: var(--footer-height);
+}
+
+/* footer left */
+
+.footer-left .current-track{
+    display: inline-block;
+}
+
+
+.footer-left .current-track img{
+    height: 40px;
+    vertical-align: middle;
+}
+
+.footer-left .current-track .caption{
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.footer-left a, .footer-left a i{
+    vertical-align: middle;
+}
+
+.footer-left .current-track .caption .title{
+    font-size: .9rem;
+ }
+ 
+ .footer-left .current-track .caption .author{
+    font-size: .8rem;
+ }
+ 
+ .footer-left .favourites{
+    display: inline-block;
+ }
+
+ /* footer center */
+
+ .footer-center .media-control a{
+    vertical-align: middle;
+}
+
+
+.footer-center .media-control a i{
+    vertical-align: middle;
+}
+
+.progress-bar-wrapper{
+    display: inline-block;
+    width: 100%;
+}
+
+.progress-bar{
+    display: inline-block;
+    background-color: var(--color-muted);
+    height: 6px;
+    border-radius: 25px;
+    vertical-align: middle;
+}
+
+.progress-bar-wrapper span{
+    font-size: .8rem;
+    vertical-align: middle;
+}
+
+.progress-bar-lg{
+    width: 60%;
+}
+
+.progress-bar-sm{
+    width: 100px;
+}
+
+.progress{
+    height: 100%;
+    width: 30%;
+    background-color: var(--color-lightgrey);
+    position: relative;
+    border-radius: 25px;
+}
+
+.progress-bar-wrapper:hover .progress{
+
+    background-color: var(--color-lightgreen);
+
+}
+
+
+.progress-bar:hover .progress::after{
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
     z-index: 999;
+}
+
+
+/* footer right */
+
+.footer-right .audio-controls{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-right .progress-bar-wrapper{
+    width: 100px;
+    vertical-align: middle;
 }
 
 
@@ -420,20 +545,32 @@ footer{
         overflow-y: auto;
     }
 
-    aside.sidebar .sidebar-nav ul li a{
+    aside.sidebar a.navbar-btn{
         display: inline-block;
+        font-size: .85rem;
+
     }
 
-    aside.sidebar .sidebar-nav ul li a .label{
+    aside.sidebar a.navbar-btn .label{
         display: inline;
         vertical-align: middle;   
     }
 
-    aside.sidebar .sidebar-nav ul li a img{
+    aside.sidebar a.navbar-btn img{
         height: 20px;
         vertical-align: middle;
     }
     
+    .logo-md{
+        display: block;
+        height: 40px;
+    
+    }
+
+    .logo-sm{display: none;}
+
+
+    .p-sm-lg{padding: .8rem;}
 
 }
 
@@ -473,6 +610,8 @@ footer{
     .col-sm-2{width: calc((100% / 12) * 2);}
     .col-sm-1{width: calc(100% / 12);}
 
+
+
 }
 
 @media screen and (min-width: 768px) {
@@ -493,6 +632,9 @@ footer{
     .col-md-3{width: calc((100% / 12) * 3);}
     .col-md-2{width: calc((100% / 12) * 2);}
     .col-md-1{width: calc(100% / 12);}
+
+
+
 
 
 
