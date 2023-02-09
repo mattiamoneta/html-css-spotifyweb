@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/master.css">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,49 +21,58 @@
 
         <main class="debug d-flex bg-primary">
 
-            <div class="upgrade-banner"></div>
+            <div class="upgrade-banner text-right p-md vertical-middle font-uppercase">
+                <a href="" class="btn btn-lg btn-outline vertical-middle">effettua l'upgrade</a>
+            </div>
 
             <!-- 
                 Sidebar
              -->
-            <aside class="debug sidebar bg-black text-muted p-xs p-sm-lg">
+            <aside class="debug sidebar bg-black text-muted py-sm">
                 
 
                <div class="sidebar-top">
-                    <div class="logo-wrapper">
+                    <div class="logo-wrapper px-sm">
                         <img src="./img/logo.svg" alt="Spotify Logo" class="logo-md mb-sm">
                         <img src="./img/logo-small.svg" alt="Spotify Logo" class="logo-sm mb-sm">
                     </div>
 
-                    <nav class="sidebar-nav py-sm">
+                    <nav class="sidebar-nav py-sm mx-sm">
                         <ul class="list-none">
-                            <li class="py-xxs"><a href="" class="navbar-btn font-bold"><img src="./img/home.svg" alt=""><span class="label"> Home</span></a></li>
+                            <li class="py-xxs current"><a href="" class="navbar-btn font-bold current"><img src="./img/home.svg" alt=""><span class="label"> Home</span></a></li>
                             <li class="py-xxs"><a href="" class="navbar-btn font-bold"><img src="./img/search.svg" alt=""><span class="label"> Cerca</span></a></li>
                             <li class="py-xxs"><a href="" class="navbar-btn font-bold"><img src="./img/libreria.svg" alt=""><span class="label"> Libreria</span></a></li>
                         </ul>
                     </nav>
 
-                    <div class="playlist py-sm">
+                    <div class="playlist py-sm px-sm">
                         <h4 class="text-light font-uppercase">Playlist</h4>
                         <a href="#" class="navbar-btn py-sm font-bold"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
 
                         <ul class="playlist-list my-xs">
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
-                            <li><a href="#" class="navbar-btn py-xxs">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xxs font-bold">Nome Playlist</a></li>
                         </ul>
 
                     </div>
                </div>
 
 
-                <div class="sidebar-bottom">
-                    BOTTOM
+                <div class="sidebar-bottom px-sm">
+                    <a href="#" class="navbar-btn font-bold"><i class="fa-solid fa-download mr-lg-xs"></i><span class="label"> Installa l'app</span></a>
+                    <hr class="my-sm">
+                    <div class="userpicture-wrapper">
+                        <div class="userpicture">
+                            <img src="./img/profile.svg" alt="">
+                        </div>
+                        <span class="font-bold ml-xs text-light label">John doe</span>
+                    </div>
                 </div>
 
             </aside>
@@ -73,11 +85,12 @@
                 <div class="filters text-center py-md">
                     <nav>
                         <ul>
-                            <li><a href="#">ITEM</a></li>
-                            <li><a href="#">ITEM</a></li>
-                            <li><a href="#">ITEM</a></li>
-                            <li><a href="#">ITEM</a></li>
-
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">in evidenza</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">podcast</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">classifiche</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">generi e mood</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">nuove uscite</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">scopri</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -274,8 +287,8 @@
 
                 <div class="footer-right col-3 text-right pr-sm">
                     <div class="audio-controls">
-                        <a href="#"><i class="fa-solid fa-list"></i></a>
-                        <a href="#"><i class="fa-solid fa-desktop"></i></a>
+                        <a href="#" class="mr-xs"><i class="fa-solid fa-list"></i></a>
+                        <a href="#" class="mr-xs"><i class="fa-solid fa-desktop"></i></a>
                     </div>
 
                     <div class="progress-bar-wrapper">

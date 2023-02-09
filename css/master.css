@@ -10,11 +10,6 @@ footer.debug{background-color: orange;}
 }
 
 
-.debug .sidebar-bottom{
-    background-color: orange;
-}
-
-.debug .footer-right{background-color: red;}
 
 
 /* End Debug */
@@ -33,8 +28,9 @@ footer.debug{background-color: orange;}
 
 
 html{
-    font-family: sans-serif; /* Inserire Font */
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 a{
     text-decoration: none;
@@ -61,9 +57,7 @@ h4{font-size: .9rem;}
     --sidebar-width-sm: 50px;
     --sidebar-width-md: 250px;
 
-    --banner-height: 80px;
-
-    --sidebar-bottom-height: 40px;
+    --sidebar-bottom-height: 80px;
     --footer-height: 90px;
     
     /* Color Variables */
@@ -88,12 +82,38 @@ h4{font-size: .9rem;}
 .text-light{color: white;}
 .text-muted{color: var(--color-muted);}
 
+/* CONTROLS */
+
+.btn{
+    display: inline-block;
+    border-radius: 2rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.btn-lg{
+    padding: 10px 20px;
+}
+
+.btn-outline{
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-outline:hover{
+    color: black;
+    border: 1px solid white;
+    background-color: white;
+}
+
+
 /* Lists */
 
 .list-none{list-style-type: none;}
 
 /* Positions */
 
+.vertical-middle{vertical-align: middle;}
 .position-relative{position: relative;}
 .position-absolute{position: absolute;}
 .d-block{display: block;}
@@ -348,7 +368,7 @@ aside.sidebar .sidebar-bottom{
     height: var(--sidebar-bottom-height);
 }
 
-aside.sidebar a.navbar-btn .label{
+aside.sidebar .label{
     display: none;
 }
 
@@ -360,15 +380,56 @@ aside.sidebar .playlist{
 
 .logo-sm{display: block;}
 
+aside.sidebar hr{
+    color: var(--color-muted);
+}
+
+
+aside.sidebar .userpicture{
+    border-radius: 50%;
+    background-color: var(--color-muted);
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+aside.sidebar .userpicture-wrapper span{
+    vertical-align: middle;
+}
+
+
+aside.sidebar .userpicture img{
+    display: inline-block;
+    height: 20px;
+}
+
+
+aside.sidebar .sidebar-nav li{
+    position: relative;
+}
+
+
+aside.sidebar .sidebar-nav li.current::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 3px;
+    height: 100%;
+    background-color: var(--color-lightgreen);
+    z-index: 999;
+}
+
 /* Banner */
 
 .banner-fix{
-    padding-top: var(--banner-height);
+    padding-top: 100px;
 }
 
 .upgrade-banner{
     position: fixed;
-    height: var(--banner-height);
     left: var(--sidebar-width-sm);
     top: 0;
     width: calc(100% - var(--sidebar-width-sm));
@@ -395,7 +456,9 @@ main{
 
 .filters ul li{
     display: inline-block;
+    font-size: .8rem;
 }
+
 
 /* Footer */
 
@@ -465,12 +528,16 @@ footer{
     vertical-align: middle;
 }
 
+.progress-bar-wrapper i{
+    vertical-align: middle;
+}
+
 .progress-bar-lg{
     width: 60%;
 }
 
 .progress-bar-sm{
-    width: 100px;
+    width: 80%;
 }
 
 .progress{
@@ -484,6 +551,7 @@ footer{
 .progress-bar-wrapper:hover .progress{
 
     background-color: var(--color-lightgreen);
+    cursor: pointer;
 
 }
 
@@ -509,7 +577,7 @@ footer{
 }
 
 .footer-right .progress-bar-wrapper{
-    width: 100px;
+    width: 30%;
     vertical-align: middle;
 }
 
@@ -551,7 +619,7 @@ footer{
 
     }
 
-    aside.sidebar a.navbar-btn .label{
+    aside.sidebar .label{
         display: inline;
         vertical-align: middle;   
     }
