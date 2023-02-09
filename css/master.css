@@ -1,17 +1,4 @@
 /* Debug */
-
-/* main.debug{background-color: red;}
-footer.debug{background-color: orange;}
-.debug .sidebar{background-color: blue;}
-.debug .upgrade-banner{background-color: yellow;} */
-.debug .album{
-    background-color: white;
-    aspect-ratio: 1/1;
-}
-
-
-
-
 /* End Debug */
 
 
@@ -39,6 +26,7 @@ a{
 
 a:hover{
     color: white;
+    transition: all .2s ease;
 }
 
 p{font-size: 1rem;}
@@ -85,6 +73,7 @@ h4{font-size: .9rem;}
 /* CONTROLS */
 
 .btn{
+    transition: all .3s ease;
     display: inline-block;
     border-radius: 2rem;
     font-size: .8rem;
@@ -93,6 +82,10 @@ h4{font-size: .9rem;}
 
 .btn-lg{
     padding: 10px 20px;
+}
+
+.btn-lg:hover{
+    transform: scale(1.1);
 }
 
 .btn-outline{
@@ -449,15 +442,84 @@ main{
     
 }
 
+.filters ul li{
+    display: inline-block;
+    position: relative;
+    font-size: .8rem;
+}
+
+.filters ul li.current a::after{
+    position: absolute;
+    content: '';
+    bottom: -8px;
+    left: 30%;
+    width: 40%;
+    height: 2px;
+    background-color: var(--color-lightgreen);
+}
+
 .album-collection{
     list-style-type: none;
 }
 
 
-.filters ul li{
-    display: inline-block;
-    font-size: .8rem;
+.album .cover-wrapper{
+    position: relative;
 }
+
+.album .cover-wrapper.cover-rounded{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.album .cover-wrapper.cover-rounded img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.album .cover-wrapper img{
+    width: 100%;
+    display: block;
+}
+
+.album .cover-wrapper .overlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+
+.album:hover .overlay{
+    display: block;
+    cursor: pointer;
+}
+
+.overlay.play::after{
+    opacity: 0;
+    font: var(--fa-font-solid);
+    content: '\f144';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0rem;
+    transition: all 2s ease;
+}
+
+
+.album:hover .overlay.play::after{
+    opacity: 1;
+    font-size: 4rem;
+}
+
+
+
+
 
 
 /* Footer */
@@ -589,6 +651,7 @@ footer{
         left: var(--sidebar-width-md);
         top: 0;
         width: calc(100% - var(--sidebar-width-md));
+        z-index: 999;
     }
 
     /* Content */
