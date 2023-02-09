@@ -13,6 +13,15 @@ footer.debug{background-color: orange;}
     background-color: orange;
 }
 
+.debug .sidebar-top{
+    background-color: rebeccapurple;
+}
+
+.debug .logo-wrapper{background-color: aqua;}
+.debug .sidebar-nav{background-color: green;}
+.debug .playlist{background-color: yellow;}
+.debug .playlist-list{background-color: deeppink;}
+
 /* End Debug */
 
 
@@ -49,7 +58,7 @@ p{font-size: 1rem;}
 
     --banner-height: 80px;
 
-    --sidebar-bottom-height: 80px;
+    --sidebar-bottom-height: 40px;
     --footer-height: 80px;
     
     /* Color Variables */
@@ -313,30 +322,27 @@ p{font-size: 1rem;}
 
 /* Sidebar */
 
-
-
 aside.sidebar{
     width: var(--sidebar-width-sm);
     text-align: center;
-    position: relative;
+    min-height: 300px;
+    overflow: hidden;
 }
 
-aside.sidebar .playlist{
-    display: none;
-}
-
-aside.sidebar .sidebar-nav ul li a .label{
-    display: none;
+aside.sidebar .sidebar-top{
+    height: calc(100% - var(--sidebar-bottom-height));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 aside.sidebar .sidebar-bottom{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    height: var(--sidebar-bottom-height);
 }
 
-
+aside.sidebar .playlist, aside.sidebar .sidebar-nav ul li a .label{
+    display: none;
+}
 
 /* Banner */
 
@@ -357,10 +363,13 @@ aside.sidebar .sidebar-bottom{
 
 main{
     height: calc(100vh - var(--footer-height));
+    overflow-y: hidden;
 }
 
 .content{
     width: calc(100% - var(--sidebar-width-sm));
+    overflow: auto;
+    
 }
 
 .album-collection{
@@ -379,21 +388,8 @@ footer{
     z-index: 999;
 }
 
-@media screen and (max-height: 460px) {
-
-   
-
-}
 
 @media screen and (min-width: 576px) {
-
-    /* Sidebar */
-
-    aside.sidebar{
-        width: var(--sidebar-width-md);
-        text-align: left;
-        overflow-y: hidden;
-    }
 
     /* Banner */
     .upgrade-banner{
@@ -407,12 +403,35 @@ footer{
         width: calc(100% - var(--sidebar-width-md));
     }
 
+
+    /* Sidebar */
+    aside.sidebar{
+        width: var(--sidebar-width-md);
+        text-align: left;
+    }
+ 
     aside.sidebar .playlist{
-        display: block;
+        display: flex;
+        overflow-y: hidden;
+        flex-direction: column;
+    }
+
+    aside.sidebar .playlist .playlist-list{
+        overflow-y: auto;
+    }
+
+    aside.sidebar .sidebar-nav ul li a{
+        display: inline-block;
     }
 
     aside.sidebar .sidebar-nav ul li a .label{
         display: inline;
+        vertical-align: middle;   
+    }
+
+    aside.sidebar .sidebar-nav ul li a img{
+        height: 20px;
+        vertical-align: middle;
     }
     
 
