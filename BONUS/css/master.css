@@ -885,6 +885,19 @@ footer{
 
 }
 
+@media screen and (max-width: 1060px) {
+    .album-collection{
+        flex-wrap: nowrap;
+    }
+
+    .col-fixed{
+        min-width: 250px;
+    }
+
+    
+}
+
+
 
 @media screen and (min-width: 1060px) {
 

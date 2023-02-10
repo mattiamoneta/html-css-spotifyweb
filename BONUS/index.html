@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/master.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <title>Spotify</title>
+</head>
+    <body>
+
+        <main class=" d-flex bg-primary">
+
+            <div class="upgrade-banner text-right p-md vertical-middle font-uppercase">
+                <a href="" class="btn btn-lg btn-outline vertical-middle">effettua l'upgrade</a>
+            </div>
+
+            <!-- 
+                Sidebar
+             -->
+            <aside class=" sidebar bg-black text-muted py-sm">
+                
+
+               <div class="sidebar-top">
+                    <div class="logo-wrapper px-sm">
+                        <img src="./img/logo.svg" alt="Spotify Logo" class="logo-md mb-sm">
+                        <img src="./img/logo-small.svg" alt="Spotify Logo" class="logo-sm mb-sm">
+                    </div>
+
+                    <nav class="sidebar-nav py-sm mx-sm">
+                        <ul class="list-none">
+                            <li class="py-xs current"><a href="" class="navbar-btn font-bold current"><img src="./img/home.svg" alt="Icon Home"><span class="label"> Home</span></a></li>
+                            <li class="py-xs"><a href="" class="navbar-btn font-bold"><img src="./img/search.svg" alt="Icon Search"><span class="label"> Cerca</span></a></li>
+                            <li class="py-xs"><a href="" class="navbar-btn font-bold"><img src="./img/libreria.svg" alt="Icon Lib"><span class="label"> Libreria</span></a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="playlist py-sm px-sm mt-md">
+                        <h4 class="text-light font-uppercase">Playlist</h4>
+                        <a href="#" class="navbar-btn py-sm font-bold"><i class="fa-solid fa-plus"></i> Crea Playlist</a>
+
+                        <ul class="playlist-list my-xs">
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                            <li><a href="#" class="navbar-btn py-xs font-bold">Nome Playlist</a></li>
+                        </ul>
+
+                    </div>
+               </div>
+
+
+                <div class="sidebar-bottom px-sm">
+                    <a href="#" class="navbar-btn font-bold"><i class="fa-solid fa-download mr-lg-xs"></i><span class="label"> Installa l'app</span></a>
+                    <hr class="my-sm">
+                    <div class="userpicture-wrapper">
+                        <div class="userpicture">
+                            <img src="./img/profile.svg" alt="Userpicture">
+                        </div>
+                        <span class="font-bold ml-xs text-light label">John doe</span>
+                    </div>
+                </div>
+
+            </aside>
+
+            <div class="content overflow-y banner-fix text-muted">
+
+                <!-- 
+                    Serach Filters 
+                -->
+                <div class="filters text-center py-md">
+                    <nav>
+                        <ul>
+                            <li class="current"><a href="#" class="mx-xs font-uppercase font-bold">in evidenza</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">podcast</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">classifiche</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">generi e mood</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">nuove uscite</a></li>
+                            <li><a href="#" class="mx-xs font-uppercase font-bold">scopri</a></li>
+                        </ul>
+                    </nav>
+                </div>
+               
+                <!-- 
+                    Recently Played 
+                -->
+                <section id="recent" class="px-md">
+
+                    <!-- Title -->
+                    <h2 class="py-lg text-light">Recently Played</h2>
+
+                    <ul class="d-flex rowfix-sm row-wrap album-collection">
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/metal_lifting.jpg" alt="Metal Lifting">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/stranger.jpeg" alt="Stranger Things">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                <h5>Kyle Dixon & Michael Stein</h5>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/aquietplace.jpeg" alt="A Quiet Place">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">A Quiet Place</h3>
+                                <h5>Subtitle</h5>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/split.jpeg" alt="Split">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Split</h3>
+                                <h5>Subtitle</h5>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/cure.jpeg" alt="Cure">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">A Cure for Wellness</h3>
+                                <h5>Subtitle</h5>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2 p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/sinister.jpeg" alt="Sinister">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Sinister</h3>
+                                <h5>Subtitle</h5>
+                            </div>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <!-- 
+                    Suggested
+                -->
+                <section id="suggested" class="px-md">
+
+                    <!-- Title -->
+                    <h2 class="pt-lg text-light">Creato per John Doe</h2>
+                    <h5 class="pt-xs pb-lg text-muted">Più ascolti, più accurati saranno i suggerimenti.</h5>
+
+                    <ul class="d-flex rowfix-sm row-wrap album-collection">
+
+                        <li class="col-fixed col-lg-2  p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/radar.jpeg" alt="Radar">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Release Radar</h3>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2  p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper">
+                                    <img src="./img/mixdaily.jpeg" alt="Daily Mix">
+                                    <div class="overlay play"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Daily Mix 1</h3>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </section>
+
+                <!-- 
+                    Popular
+                -->
+                <section id="popular" class="px-md">
+
+                    <!-- Title -->
+                    <h2 class="pt-md text-light">Artisti più popolari</h2>
+                    <h5 class="pt-xs pb-lg  text-muted">Più ascolti, più accurati saranno i suggerimenti.</h5>
+
+                    <ul class="d-flex rowfix-sm row-wrap album-collection">
+
+                        <li class="col-fixed col-lg-2  p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper cover-rounded">
+                                    <img src="./img/youg.jpeg" alt="Lana del Rey">
+                                    <div class="overlay"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Lana del Rey</h3>
+                            </div>
+                        </li>
+
+                        <li class="col-fixed col-lg-2  p-sm text-center">
+                            <div class="album">
+                                <div class="cover-wrapper cover-rounded">
+                                    <img src="./img/einaudi.jpeg" alt="Einaudi">
+                                    <div class="overlay"></div>
+                                </div>
+
+                                <h3 class="my-sm text-light">Ludovico Einaudi</h3>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class=" bg-secondary d-flex justify-between align-center">
+
+                <div class="footer-left col-xs-3 col-sm-4 col-md-4 col-lg-4 text-left text-light pl-xs pl-sm-md">
+
+                    <div class="current-track mr-lg-md">
+                        <img src="./img/sinister.jpeg" alt="Sinister">
+                        <div class="caption ml-xs">
+                           <div class="font-bold title">Sinister</div>
+                           <div class="text-muted author"><a href="#">Nome brano</a></div>
+                        </div>
+                    </div>
+
+                    <div class="favourites">
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#" class="ml-xs-md"><i class="fa-regular fa-folder"></i></a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-center col-xs-3 col-sm-4 col-md-6 col-lg-4  text-center">
+
+                    <div class="media-control">
+                        <a href="#" class="mx-lg-sm text-light"><i class="fa-solid fa-shuffle"></i></a>
+                        <a href="#" class="ml-xs ml-sm-sm mx-lg-sm text-light"><i class="fa-solid fa-backward-step"></i></a>
+                        <a href="#" class="ml-xs ml-sm-sm mx-lg-sm text-light"><i class="fa-2x-md fa-solid fa-circle-play"></i></a>
+                        <a href="#" class="ml-xs ml-sm-sm mx-lg-sm text-light"><i class="fa-solid fa-forward-step"></i></a>
+                        <a href="#" class="ml-xs ml-sm-sm mx-lg-sm text-light"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                    </div>
+
+                    <div class="progress-bar-wrapper my-xs">
+                        <span class="text-light px-lg-sm font-bold">0:00</span>
+                        <div class="progress-bar progress-bar-lg">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="text-light px-lg-sm font-bold">1:23</span>
+                    </div>
+
+                </div>
+
+                <div class="footer-right col-xs-3 col-sm-4 col-md-3 col-lg-4 text-right pr-xs pr-sm-md">
+                    <div class="audio-controls">
+                        <a href="#" class="mr-sm hidden-inline-xs"><i class="fa-solid fa-list"></i></a>
+                        <a href="#" class="mr-sm hidden-inline-xs"><i class="fa-solid fa-desktop"></i></a>
+                        <a href="#" class="mr-xs"><i class="fa-solid fa-volume-low"></i></a>
+                    </div>
+
+                    <div class="progress-bar-wrapper">
+                        
+                        <div class="progress-bar progress-bar-sm">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+        </footer>
+
+    </body>
+</html>
