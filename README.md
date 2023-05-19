@@ -1,7 +1,38 @@
+<!---
+LOGO
+-->
+
 <p align="center">
   <img src="https://github.com/mattiamoneta/html-css-spotifyweb/blob/main/img/logo.svg" alt="Spotify" height="50px"/>
 </p>
 
+<!---
+THUMBNAIL GIF
+-->
+
 <p align="center">
-  <img src="https://github.com/mattiamoneta/html-css-spotifyweb/blob/main/thumbnail.gif" alt="Spotify"/>
+  <img src="https://github.com/mattiamoneta/html-css-spotifyweb/blob/main/thumbnail.gif" alt="Spotify Thumbnail Demo"/>
 </p>
+
+<!---
+SHIELDS.IO
+
+Syntax: <a href="website"><img src="https://img.shields.io/badge/-LABEL-COLORHEX?logo=SIMPLELOGONAME&logoColor=white" alt="LABELALT"></a>
+-->
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5"></a>
+  <a href="#"><img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3"></a>
+</p>
+
+Questo progetto replica l'interfaccia web di Spotify, senza l'uso di framework ma partendo da HTML e CSS puro.
+
+
+## Tecnologie
+
+- HTML/CSS
+- SCSS
+
+```diff
+! DISCLAMER
+```
+<sub><sup>Tutti i marchi appartengono ai legittimi proprietari; marchi di terzi, loghi, nomi di prodotti, nomi commerciali, nomi corporativi e di società citati sono marchi di proprietà dei rispettivi titolari o marchi registrati d’altre società e sono stati utilizzati a puro scopo esplicativo, senza alcun fine di violazione dei diritti di Copyright vigenti.</sup></sub>
