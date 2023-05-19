@@ -32,8 +32,6 @@ Questo progetto replica l'interfaccia web di Spotify, senza l'uso di framework m
 - HTML/CSS
 - SCSS
 
-```diff
-! DISCLAMER
 <sub><sup>Tutti i marchi appartengono ai legittimi proprietari; marchi di terzi, loghi, nomi di prodotti, nomi commerciali, nomi corporativi e di società citati sono marchi di proprietà dei rispettivi titolari o marchi registrati d’altre società e sono stati utilizzati a puro scopo esplicativo, senza alcun fine di violazione dei diritti di Copyright vigenti.</sup></sub>
-```
+
 
